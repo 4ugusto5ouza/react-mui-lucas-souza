@@ -1,5 +1,15 @@
-import { Avatar, Box, Divider, Drawer, useTheme } from "@mui/material";
-import { height } from "@mui/system";
+import {
+  Avatar,
+  Box,
+  Divider,
+  Drawer,
+  Icon,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  useTheme,
+} from "@mui/material";
 import { ReactNode } from "react";
 
 interface IMenuLateral {
@@ -31,7 +41,16 @@ export const MenuLateral: React.FC<IMenuLateral> = ({ children }) => {
             />
           </Box>
           <Divider />
-          <Box flex={1}></Box>
+          <Box flex={1}>
+            <List component={"nav"}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Icon>home</Icon>
+                </ListItemIcon>
+                <ListItemText primary={"Página Inicial"} />
+              </ListItemButton>
+            </List>
+          </Box>
         </Box>
       </Drawer>
       <Box height={"100vh"} marginLeft={theme.spacing(28)}>
