@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
-import { useAppThemeContext } from "../../shared/hooks";
+import { useAppDrawerContext } from "../../shared/hooks";
 
 export const Home = () => {
-  const { toggleTheme } = useAppThemeContext();
+  const { toggleDrawerOpen } = useAppDrawerContext();
   return (
     <>
-      <Button variant="contained" onClick={toggleTheme}>
-        Toggle Theme
+      <Button variant="contained" onClick={toggleDrawerOpen}>
+        Toggle Open
       </Button>
     </>
   );

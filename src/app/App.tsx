@@ -1,13 +1,15 @@
 import { AppRoutes } from "./routes";
 import { MenuLateral } from "./shared/components";
-import { AppThemeProvider } from "./shared/contexts";
+import { AppDrawerProvider, AppThemeProvider } from "./shared/contexts";
 
 const App = () => {
   return (
     <AppThemeProvider>
-      <MenuLateral>
-        <AppRoutes />
-      </MenuLateral>
+      <AppDrawerProvider>
+        <MenuLateral>
+          <AppRoutes />
+        </MenuLateral>
+      </AppDrawerProvider>
     </AppThemeProvider>
   );
 };
