@@ -5,8 +5,9 @@ export const Home = () => {
   const { toggleTheme } = useAppThemeContext();
   return (
     <>
-      <p>Home</p>
-      <Button onClick={toggleTheme}>Toggle Theme</Button>
+      <Button variant="contained" onClick={toggleTheme}>
+        Toggle Theme
+      </Button>
     </>
   );
 };

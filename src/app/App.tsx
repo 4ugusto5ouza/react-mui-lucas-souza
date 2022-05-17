@@ -1,13 +1,13 @@
 import { AppRoutes } from "./routes";
+import { MenuLateral } from "./shared/components";
 import { AppThemeProvider } from "./shared/contexts";
 
 const App = () => {
   return (
     <AppThemeProvider>
-      <div>
-        <h1>React JS + MUI</h1>
+      <MenuLateral>
         <AppRoutes />
-      </div>
+      </MenuLateral>
     </AppThemeProvider>
   );
 };
