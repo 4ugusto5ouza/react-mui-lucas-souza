@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { ReactNode } from "react";
 import { useAppDrawerContext } from "../../hooks";
+import { ListItemLink } from "../list-item-link/ListItemLink";
 
 interface IMenuLateral {
   children?: ReactNode;
@@ -52,12 +53,12 @@ export const MenuLateral: React.FC<IMenuLateral> = ({ children }) => {
           <Divider />
           <Box flex={1}>
             <List component={"nav"}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon>home</Icon>
-                </ListItemIcon>
-                <ListItemText primary={"Página Inicial"} />
-              </ListItemButton>
+              <ListItemLink
+                icon="home"
+                label="Página inicial"
+                to="/pagina-inicial"
+                onClick={smDown ? toggleDrawerOpen : undefined}
+              />
             </List>
           </Box>
         </Box>
