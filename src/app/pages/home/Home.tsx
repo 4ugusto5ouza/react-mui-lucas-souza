@@ -1,13 +1,6 @@
-import { Button } from "@mui/material";
-import { useAppDrawerContext } from "../../shared/hooks";
+import { Box } from "@mui/material";
+import { LayoutPageBase } from "../../shared/layouts";
 
 export const Home = () => {
-  const { toggleDrawerOpen } = useAppDrawerContext();
-  return (
-    <>
-      <Button variant="contained" onClick={toggleDrawerOpen}>
-        Toggle Open
-      </Button>
-    </>
-  );
+  return <LayoutPageBase titulo="Página inicial"> Testando</LayoutPageBase>;
 };
