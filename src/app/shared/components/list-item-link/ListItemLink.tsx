@@ -27,7 +27,7 @@ export const ListItemLink: React.FC<IListItemLinkProps> = ({
 
   const handleClick = useCallback(() => {
     navigate(to);
-    onClick && onClick();
+    onClick?.();
   }, []);
 
   return (

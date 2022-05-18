@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { useAppDrawerContext } from "../hooks";
 
 interface ILayoutPageBaseProps {
@@ -23,7 +23,18 @@ export const LayoutPageBase: React.FC<ILayoutPageBaseProps> = ({
   const smDown = useMediaQuery(theme.breakpoints.down("sm"));
   const mdDown = useMediaQuery(theme.breakpoints.down("md"));
 
-  const { toggleDrawerOpen } = useAppDrawerContext();
+  const { toggleDrawerOpen, setDrawerOptions } = useAppDrawerContext();
+
+  useEffect(() => {
+    setDrawerOptions?.([
+      {
+        icon: "home",
+        label: "Página inicial",
+        path: "pagina-inicial",
+      },
+    ]);
+  }, []);
+
   return (
     <Box height={"100%"} display="flex" flexDirection={"column"} gap={1}>
       <Box
